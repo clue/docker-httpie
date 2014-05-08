@@ -38,10 +38,25 @@ you can append this exact line to your `~/.bashrc` (or similar).
 
 ## Usage
 
-Once [installed](#install), you running HTTPie is as simple as invoking it like this:
+Once [installed](#install), running HTTPie is as simple as invoking it like this:
+
+> *From [the official examples](https://github.com/jakubroztocil/httpie#examples):*
 
 ```bash
+# Hello World
 $ http httpie.org
+
+# Custom HTTP method and headers
+$ http PUT example.org X-API-Token:123 name=John
+
+# Submitting forms
+$ http -f POST example.org hello=World
+
+# Upload a file using redirected input:
+$ http example.org < file.json
+
+# Download a file and save it via redirected output:
+$ http example.org/file > file
 ```
 
 You can supply any number of [HTTPie arguments](https://github.com/jakubroztocil/httpie#readme)
