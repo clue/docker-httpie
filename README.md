@@ -34,7 +34,11 @@ $ alias http='docker run -it --rm clue/httpie'
 ```
 
 This will create a temporary alias. In order to make it persist reboots,
-you can append this exact line to your `~/.bashrc` (or similar).
+you can append this exact line to your `~/.bashrc` (or similar) like this:
+
+```bash
+$ alias http >> ~/.bashrc
+```
 
 ## Usage
 
@@ -43,19 +47,19 @@ Once [installed](#install), running HTTPie is as simple as invoking it like this
 > *From [the official examples](https://github.com/jakubroztocil/httpie#examples):*
 
 ```bash
-# Hello World
+ # Hello World
 $ http httpie.org
 
-# Custom HTTP method and headers
+ # Custom HTTP method and headers
 $ http PUT example.org X-API-Token:123 name=John
 
-# Submitting forms
+ # Submitting forms
 $ http -f POST example.org hello=World
 
-# Upload a file using redirected input:
+ # Upload a file using redirected input:
 $ http example.org < file.json
 
-# Download a file and save it via redirected output:
+ # Download a file and save it via redirected output:
 $ http example.org/file > file
 ```
 
