@@ -30,7 +30,7 @@ To further ease running, it's recommended to set up a much shorter `alias`
 so that you can easily execute it as just `http`:
 
 ```bash
-$ alias http='docker run -it --rm clue/httpie'
+$ alias http='docker run -it --rm --net=host clue/httpie'
 ```
 
 This will create a temporary alias. In order to make it persist reboots,
