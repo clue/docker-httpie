@@ -46,20 +46,33 @@ Once [installed](#install), running HTTPie is as simple as invoking it like this
 
 > *From [the official examples](https://github.com/jakubroztocil/httpie#examples):*
 
+Hello World:
+
 ```bash
- # Hello World
 $ http httpie.org
+```
 
- # Custom HTTP method and headers
+Custom HTTP method and headers:
+
+```bash
 $ http PUT example.org X-API-Token:123 name=John
+```
 
- # Submitting forms
+Submitting forms:
+
+```bash
 $ http -f POST example.org hello=World
+```
 
- # Upload a file using redirected input:
+Upload a file using redirected input:
+
+```bash
 $ http example.org < file.json
+```
 
- # Download a file and save it via redirected output:
+Download a file and save it via redirected output:
+
+```bash
 $ http example.org/file > file
 ```
 
