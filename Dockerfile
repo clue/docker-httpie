@@ -1,7 +1,8 @@
-FROM ubuntu
+FROM alpine:edge
+
 MAINTAINER Christian Lück <christian@lueck.tv>
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
-	httpie
+RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+    apk add --no-cache httpie@testing ca-certificates
 
 ENTRYPOINT ["http"]
